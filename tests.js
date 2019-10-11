@@ -18,7 +18,15 @@ describe('sayHello', function () {
     it('should be a defined function', function () {
         expect(typeof sayHello).toBe('function');
     });
-})
+    it('should be a string', function () {
+        expect(typeof sayHello()).toBe("string");
+    })
+
+
+
+
+
+});
 
 
 //unit test for isFive function
@@ -31,7 +39,7 @@ describe('isFive', function () {
    });
    it('isFive should equal to 5 to be true',function () {
        expect(isFive()).toBe(5);
-   })
+   });
 
 
 
