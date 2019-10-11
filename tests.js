@@ -20,7 +20,22 @@ describe('sayHello', function () {
     });
     it('should be a string', function () {
         expect(typeof sayHello()).toBe("string");
-    })
+    });
+    it('should return "Hello, Jane' , function() {
+        expect(sayHello("Jane")).toBe("Hello, Jane");
+    });
+    it('should return Hello, Alex' , function() {
+        expect(sayHello("Alex")).toBe("Hello, Alex");
+    });
+    it('should return Hello, Pat' , function() {
+        expect(sayHello("Pat")).toBe("Hello, Pat");
+    });
+    it('should return Hello, World', function () {
+        expect(sayHello(true)).toBe("Hello, World")
+    });
+    it('should not return Hello, World', function () {
+        expect(sayHello(false)).toBe("Hello, World")
+    });
 
 
 
