@@ -10,6 +10,10 @@ function sayHello(name) {
     }
 }
 
-function isFive(num) {
-    return num === 5;
+function isFive() {
+
+}
+
+function isEven() {
+    
 }

@@ -30,15 +30,12 @@ describe('sayHello', function () {
     it('should return Hello, Pat' , function() {
         expect(sayHello("Pat")).toBe("Hello, Pat");
     });
-    it('should return Hello, World', function () {
-        expect(sayHello(true)).toBe("Hello, World")
-    });
-    it('should not return Hello, World', function () {
-        expect(sayHello(false)).toBe("Hello, World")
-    });
-
-
-
+    // it('should return Hello, World', function () {
+    //     expect(sayHello(true)).toBe("Hello, World")
+    // });
+    // it('should not return Hello, World', function () {
+    //     expect(sayHello(false)).toBe("Hello, World")
+    // });
 
 
 });
@@ -52,9 +49,41 @@ describe('isFive', function () {
    it('should be a boolean when called', function () {
        expect(typeof isFive()).toBe('boolean');
    });
-   it('isFive should equal to 5 to be true',function () {
-       expect(isFive()).toBe(5);
+   it('should equal to 5 to be true',function () {
+       expect(isFive(true)).toBe(5);
    });
+    it('should be true if "5"',function () {
+        expect(isFive(true)).toBe("5");
+    });
+
+ //unit test for isEven function
+ describe('isEven', function () {
+     it("should be a defined function", function () {
+         expect(typeof isEven).toBe('function');
+     });
+     it('should be a boolean when called', function () {
+         expect(typeof isFive()).toBe('boolean');
+     });
+     it('should return true for 2', function () {
+         expect(typeof isFive(true)).toBe(2);
+     });
+     it('should return false for 3', function () {
+         expect(typeof isFive(false)).toBe(3);
+     });
+     it('should return true for -4', function () {
+         expect(typeof isFive(true)).toBe(-4);
+     });
+     it('should return true for 2', function () {
+         expect(typeof isFive(true)).toBe(2);
+     });
+
+
+
+
+
+
+ })
+
 
 
 
