@@ -71,24 +71,35 @@ describe('isEven', function () {
          expect(typeof isEven).toBe('function');
      });
      it('should be a boolean when called', function () {
-         expect(typeof isFive()).toBe('boolean');
+         expect(typeof isEven).toBe('boolean');
      });
      it('should return true for 2', function () {
-         expect(typeof isFive(true)).toBe(2);
+         expect(typeof isEven(2)).toBe(true);
      });
      it('should return false for 3', function () {
-         expect(typeof isFive(false)).toBe(3);
+         expect(typeof isEven(3)).toBe(false);
      });
      it('should return true for -4', function () {
-         expect(typeof isFive(true)).toBe(-4);
+         expect(typeof isEven(-4)).toBe(true);
      });
-     it('should return true for 2', function () {
-         expect(typeof isFive(true)).toBe(2);
+     it('should return false for "banana"', function () {
+         expect(typeof isEven("banana")).toBe(false);
+     });
+     it('should return true for "8"', function () {
+        expect(typeof isEven("8")).toBe(true);
      });
 
+     it('should return false when called with a boolean input isEven(true)', function () {
+        expect(typeof isEven(false)).toBe(false);
+     });
+     it('should return false when called without an argument', function () {
+        expect(typeof isEven(" ")).toBe(false);
+     });
+     it('should return false for Infinity', function () {
+     expect(typeof isEven(Infinity)).toBe(false);
+     });
 
-
- });
+});
 
 
 
