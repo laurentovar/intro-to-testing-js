@@ -71,32 +71,32 @@ describe('isEven', function () {
          expect(typeof isEven).toBe('function');
      });
      it('should be a boolean when called', function () {
-         expect(typeof isEven).toBe('boolean');
+         expect(typeof isEven()).toBe('boolean');
      });
      it('should return true for 2', function () {
-         expect(typeof isEven(2)).toBe(true);
+         expect(isEven(2)).toBe(true);
      });
      it('should return false for 3', function () {
-         expect(typeof isEven(3)).toBe(false);
+         expect(isEven(3)).toBe(false);
      });
      it('should return true for -4', function () {
-         expect(typeof isEven(-4)).toBe(true);
+         expect(isEven(-4)).toBe(true);
      });
      it('should return false for "banana"', function () {
-         expect(typeof isEven("banana")).toBe(false);
+         expect(isEven("banana")).toBe(false);
      });
      it('should return true for "8"', function () {
-        expect(typeof isEven("8")).toBe(true);
+        expect(isEven("8")).toBe(true);
      });
 
-     it('should return false when called with a boolean input isEven(true)', function () {
-        expect(typeof isEven(false)).toBe(false);
+     it('should return false when giving a boolean input example: isEven(true)', function () {
+        expect(isEven(true)).toBe(false);
      });
      it('should return false when called without an argument', function () {
-        expect(typeof isEven(" ")).toBe(false);
+        expect(isEven()).toBe(false);
      });
      it('should return false for Infinity', function () {
-     expect(typeof isEven(Infinity)).toBe(false);
+     expect(isEven(Infinity)).toBe(false);
      });
 
 });
@@ -107,54 +107,54 @@ describe('isVowel', function () {
         expect(typeof isVowel).toBe('function');
     });
     it('should be a boolean when called', function () {
-        expect(typeof isVowel).toBe('boolean');
+        expect(typeof isVowel()).toBe('boolean');
     });
     it('should return true for "a"', function () {
-        expect(typeof isVowel("a")).toBe(true);
+        expect(isVowel("a")).toBe(true);
     });
     it('should return true for "A"', function () {
-        expect(typeof isVowel("A")).toBe(true);
+        expect(isVowel("A")).toBe(true);
     });
     it('should return true for "y"', function () {
-        expect(typeof isVowel("y")).toBe(false);
+        expect(isVowel("y")).toBe(false);
     });
     it('should return false if input is a boolean', function () {
-        expect(typeof isVowel(true)).toBe(false);
+        expect(isVowel(true)).toBe(false);
     });
-    it('should return true for "8"', function () {
-        expect(typeof isVowel("banana")).toBe(false);
+    it('should return false for "8"', function () {
+        expect(isVowel("8")).toBe(false);
     });
     it('should return false when called with a boolean input isEven(true)', function () {
-        expect(typeof isVowel()).toBe(false);
+        expect(isVowel()).toBe(false);
     });
 
 });
 
 //Unit test for add function
-describe('isVowel', function () {
+describe('add', function () {
     it("should be a defined function", function () {
         expect(typeof add).toBe('function');
     });
     it('should be a 5 when input (2,3)', function () {
-        expect(typeof add(2,3)).toBe(5);
+        expect(add(2,3)).toBe(5);
     });
     it('should return -12 when input (-3, -9)', function () {
-        expect(typeof add(-3, -9)).toBe(-12);
+        expect(add(-3, -9)).toBe(-12);
     });
     it('should return 11 when input ("5", 6)', function () {
-        expect(typeof add("5", 6)).toBe(11);
+        expect(add("5", 6)).toBe(11);
     });
     it('should return 6 when input ("-4","10")', function () {
-        expect(typeof add("-4", "10")).toBe(6);
+        expect(add("-4", "10")).toBe(6);
     });
     it('should return NaN if input ("banana", "split")', function () {
-        expect(typeof add("banana", "split")).toBe(NaN);
+        expect(add("banana", "split")).toBe("NaN");
     });
     it('should return NaN for (2, "apples")', function () {
-        expect(typeof add(2, "apples")).toBe(NaN);
+        expect(add(2, "apples")).toBe('NaN');
     });
     it('should return NaN for ()', function () {
-        expect(typeof add(" ")).toBe(NaN);
+        expect(add(" ")).toBe("NaN");
     });
 });
 
