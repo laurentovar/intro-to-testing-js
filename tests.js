@@ -124,13 +124,39 @@ describe('isVowel', function () {
     it('should return true for "8"', function () {
         expect(typeof isVowel("banana")).toBe(false);
     });
-
     it('should return false when called with a boolean input isEven(true)', function () {
         expect(typeof isVowel()).toBe(false);
     });
 
 });
 
+//Unit test for add function
+describe('isVowel', function () {
+    it("should be a defined function", function () {
+        expect(typeof add).toBe('function');
+    });
+    it('should be a 5 when input (2,3)', function () {
+        expect(typeof add(2,3)).toBe(5);
+    });
+    it('should return -12 when input (-3, -9)', function () {
+        expect(typeof add(-3, -9)).toBe(-12);
+    });
+    it('should return 11 when input ("5", 6)', function () {
+        expect(typeof add("5", 6)).toBe(11);
+    });
+    it('should return 6 when input ("-4","10")', function () {
+        expect(typeof add("-4", "10")).toBe(6);
+    });
+    it('should return NaN if input ("banana", "split")', function () {
+        expect(typeof add("banana", "split")).toBe(NaN);
+    });
+    it('should return NaN for (2, "apples")', function () {
+        expect(typeof add(2, "apples")).toBe(NaN);
+    });
+    it('should return NaN for ()', function () {
+        expect(typeof add(" ")).toBe(NaN);
+    });
+});
 
 
 
