@@ -13,6 +13,7 @@ describe('helloWorld', function() {
       expect(helloWorld()).not.toBe(undefined);
     });
 });
+
 //unit test for sayHello function
 describe('sayHello', function () {
     it('should be a defined function', function () {
@@ -30,12 +31,12 @@ describe('sayHello', function () {
     it('should return Hello, Pat' , function() {
         expect(sayHello("Pat")).toBe("Hello, Pat");
     });
-    // it('should return Hello, World', function () {
-    //     expect(sayHello(true)).toBe("Hello, World")
-    // });
-    // it('should not return Hello, World', function () {
-    //     expect(sayHello(false)).toBe("Hello, World")
-    // });
+    it('should return "Hello, World" when passed the boolean true', function () {
+        expect(sayHello(true)).toBe("Hello, World");
+    });
+    it('should not return "Hello, World" when passed the boolean false', function () {
+        expect(sayHello(false)).toBe("Hello, World");
+    });
 
 
 });
@@ -43,21 +44,28 @@ describe('sayHello', function () {
 
 //unit test for isFive function
 describe('isFive', function () {
-    it('should be a defined function', function() {
+    it('should be a defined function', function () {
         expect(typeof isFive).toBe('function');
     });
-   it('should be a boolean when called', function () {
-       expect(typeof isFive()).toBe('boolean');
-   });
-   it('should equal to 5 to be true',function () {
-       expect(isFive(true)).toBe(5);
-   });
-    it('should be true if "5"',function () {
-        expect(isFive(true)).toBe("5");
+    it('should return a boolean when called', function () {
+        expect(typeof isFive()).toBe('boolean');
     });
+    it('should be true when equal to 5', function () {
+        expect(isFive(5)).toBe(true);
+    });
+    it('should be true if "5"', function () {
+        expect(isFive("5")).toBe(true);
+    });
+    it('should be false if given 50', function () {
+        expect(isFive(50)).toBe(false);
+    });
+    it('should return false if given 8', function () {
+        expect(isFive(8)).toBe(false);
+    })
+});
 
  //unit test for isEven function
- describe('isEven', function () {
+describe('isEven', function () {
      it("should be a defined function", function () {
          expect(typeof isEven).toBe('function');
      });
@@ -79,15 +87,10 @@ describe('isFive', function () {
 
 
 
-
-
-
- })
-
+ });
 
 
 
 
 
 
-});

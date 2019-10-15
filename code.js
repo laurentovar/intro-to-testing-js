@@ -3,15 +3,18 @@ function helloWorld() {
     return "Hello, World!";
 }
 function sayHello(name) {
-    if (name === true){
-        return "Hello World";
-    }else {
+    if (name === true  || name === false){
+
+        return "Hello, World";
+    }
+
+    else {
         return "Hello, " + name;
     }
 }
 
-function isFive() {
-
+function isFive(number) {
+    return number == 5;
 }
 
 function isEven() {
